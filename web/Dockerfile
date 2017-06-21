@@ -7,4 +7,4 @@ WORKDIR /app
 RUN pip install -r requirements.txt
 RUN yarn install
 ENTRYPOINT ["python"]
-CMD ["app.py"]
+CMD ["run.py"]
