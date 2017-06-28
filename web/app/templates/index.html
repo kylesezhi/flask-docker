@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-    <script src="../../node_modules/medium-editor/dist/js/medium-editor.min.js"></script>
-    <link rel="stylesheet" href="../../node_modules/medium-editor/dist/css/medium-editor.css"> 
-    <h1>Hi there!</h1>
+    <link rel="stylesheet" href="{{ url_for('static', filename='node_modules/medium-editor/dist/css/medium-editor.css') }}"> 
+    <div class="editable"><p>Hi there!</p></div>
+    <script src="{{ url_for('static', filename='node_modules/medium-editor/dist/js/medium-editor.min.js') }}"></script>
+    <script>var editor = new MediumEditor('.editable');</script>
 {% endblock %}
